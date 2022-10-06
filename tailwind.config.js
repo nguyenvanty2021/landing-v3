@@ -4,7 +4,9 @@ module.exports = {
 	content: ['src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		backgroundImage: {
-			"landing": "url('../../public/images/background.svg')"
+			"landing": "url('../../public/images/background.svg')",
+			"preFooterPC": "url('../../public/images/footer_1.svg')",
+			"preFooterMobile": "url('../../public/images/footer_2.svg')"
 		},
 		screens: {
 			// mobile: '320px',
