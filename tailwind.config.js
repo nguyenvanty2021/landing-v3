@@ -46,6 +46,7 @@ module.exports = {
 				h10: ['10px', '12px'],
 			},
 			backgroundImage: {
+				'header': 'linear-gradient(102.92deg,#36c1ff 6.55%,#77a3f8 47.11%,#bd81f1 71.51%,#cf79ee 98.22%)',
 				'blue-to-pink-102deg':
 					'linear-gradient(102.92deg, #36C1FF 6.55%, #77A3F8 47.11%, #BD81F1 71.51%, #CF79EE 98.22%);',
 			},
