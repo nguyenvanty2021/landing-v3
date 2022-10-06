@@ -1,8 +1,5 @@
 import HelmetCommon from 'common/components/helmet';
-import React, { useEffect } from 'react';
-import styles from '../modules/landing/style/landing.module.scss';
-import ReactGa from 'react-ga';
-import { useRouter } from 'next/router';
+import React from 'react';
 import dynamic from 'next/dynamic';
 export const ROUTES = {
 	TOKEN_PRESALE_ROUNDS: '/token-presale-rounds',
@@ -32,13 +29,6 @@ const Statistic = dynamic(
 	() => import('./../modules/landing/components/Statistic')
 );
 export default function LandingPage() {
-	const router = useRouter();
-	useEffect(() => {
-		ReactGa.initialize(process?.env?.NEXT_PUBLIC_GA_TRACKING_CODE || '');
-		// to report page view Google Analytics
-		ReactGa.pageview(router?.pathname || '');
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
 	return (
 		<>
 			<HelmetCommon
@@ -46,8 +36,8 @@ export default function LandingPage() {
 				description='Description landing...'
 				href={ROUTES.LANDING}
 			/>
-			<div className={`${styles['landing']}`}>
-				<div className={styles['landing_background']}>
+			<div className='max-w-[100%] scrollbar-width scrollbar-medium overflow-hidden bg-[#0c1e32] '>
+				<div className='bg-repeat flex items-center bg-landing flex-col bg-center backgroundSizeMobile desktop:bg-contain'>
 					<div className='desktop:max-w-[90rem] mobile:max-w-[100vw]'>
 						<Header />
 						<main>
