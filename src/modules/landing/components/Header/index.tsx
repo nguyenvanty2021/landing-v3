@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './../../style/header.module.scss';
 import LazyLoadCommon from 'common/components/lazyLoad';
-import { ROUTES } from 'pages/landing';
+import { ROUTES } from 'pages';
 export default function Header() {
 	return (
 		<header className={styles['header']} id='header'>

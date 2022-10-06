@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import styles from '../style/footer.module.scss';
 import LazyLoadCommon from 'common/components/lazyLoad';
-import { ROUTES } from 'pages/landing';
+import { ROUTES } from 'pages';
 type ListIntroduceProps = {
 	id: number;
 	content: {
