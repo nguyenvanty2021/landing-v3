@@ -1,30 +1,29 @@
 import LazyLoadCommon from 'common/components/lazyLoad';
 import Image from 'next/image';
-import styles from '../style/about.module.scss';
 export default function About() {
 	return (
 		<section id='about'>
-			<div className={styles['about-section']}>
-				<div className={styles['text-container-section']}>
+			<div className='w-full mt-[2rem] desktop:mt-[6.875rem] flex flex-col-reverse desktop:flex-row justify-center items-center '>
+				<div className='flex px-[32px] w-full desktop:w-[50%] justify-start desktop:justify-end items-start desktop:items-end flex-col '>
 					<div
 						itemScope
 						itemType='http://schema.org/Organization'
-						className={styles['text-section']}
+						className='flex flex-col mr-[5rem] items-start desktop:items-end w-full desktop:w-[31rem]'
 					>
 						<h1
 							itemProp='title'
-							className={`${styles['text-section_title']} ${styles['gradient-text']}`}
+							className={`text-left text-[2.5rem] font-[600] inline-block leading-[3.25rem] mt-[4.75rem] desktop:leading-[3.125rem] desktop:text-[3.125rem] desktop:text-right gradient-about`}
 						>
 							About
 						</h1>
 						<h2
 							itemProp='sub-title'
-							className={styles['text-section_subtitle']}
+							className='text-[#d47af5] mt-[1.25rem] font-[600] leading-[1.75rem] text-[1.25rem] desktop:text-[1.375rem] text-left desktop:text-right '
 						>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
 							vulputate libero et velit interdum, ac aliquet odio mattis.
 						</h2>
-						<h2 itemProp='description' className={styles['text-section_p']}>
+						<h2 itemProp='description' className='leading-[1.375rem] mt-[1.25rem] text-white text-[0.875rem] opacity-[0.8] text-left desktop:text-right'>
 							per inceptos himenaeos. Curabitur tempus urna at turpis
 							condimentum lobortis. Ut commodo efficitur neque. Ut diam quam,
 							semper iaculis condimentum ac, vestibulum eu nisl.Lorem ipsum
@@ -44,7 +43,7 @@ export default function About() {
 						</h2>
 					</div>
 				</div>
-				<div className={styles['img-section']}>
+				<div className='w-full desktop:w-[50%] flex justify-center desktop:justify-start'>
 					<div className='w-[46.125rem]'>
 						<LazyLoadCommon>
 							<Image
