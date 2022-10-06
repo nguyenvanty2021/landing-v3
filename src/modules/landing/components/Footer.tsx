@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
-import styles from '../style/footer.module.scss';
 import LazyLoadCommon from 'common/components/lazyLoad';
 import { ROUTES } from 'pages';
 type ListIntroduceProps = {
@@ -67,9 +66,9 @@ export default function Footer() {
 		},
 	];
 	return (
-		<footer className={styles['footer-section']}>
-			<div className={styles['footer-container']}>
-				<div className={styles['footer-1']}>
+		<footer className='h-[fit-content] w-full desktop:w-screen bg-[#071423] flex justify-center items-end desktop:h-[21.875rem]'>
+			<div className='flex pt-[3.875rem] flex-col mx-[9.375rem] max-w-[100%] h-full'>
+				<div className='flex flex-col desktop:flex-row items-center px-[2rem] desktop:px-[unset] desktop:items-start '>
 					<div className='w-[8.125rem] h-[8.125rem]'>
 						<Link href={ROUTES.LANDING} passHref>
 							<a>
@@ -84,14 +83,14 @@ export default function Footer() {
 							</a>
 						</Link>
 					</div>
-					<div className={styles['footer-1_menu']}>
-						<div className={styles['footer-1_menu_text']}>
+					<div className='w-full desktop:w-[unset] mt-[3.75rem] flex grow-[1] desktop:mt-[unset] justify-center desktop:justify-around desktop:ml-[10rem] flex-col desktop:flex-row '>
+						<div className='flex justify-between desktop:justify-start flex-row'>
 							{listIntroduce?.length > 0 &&
 								listIntroduce.map((values) => {
 									return (
 										<div
 											key={values.id}
-											className={styles['footer-1_menu_text_list']}
+											className='desktop:mr-[8.125rem] flex flex-col justify-between w-[10rem] h-[10rem]'
 										>
 											{values?.content?.length > 0 &&
 												values.content.map((valuesHref) => {
@@ -115,10 +114,10 @@ export default function Footer() {
 						<div
 							itemScope
 							itemType='http://schema.org/Organization'
-							className={styles['footer-1_menu_btn']}
+							className='mt-[3.75rem] desktop:mt-[unset] flex flex-col'
 						>
-							<button itemProp='pitch-deck' className={styles['footer-btn']}>
-								<h1 className={styles['footer-btn_label']}>PITCH DECK</h1>
+							<button itemProp='pitch-deck' className={`flex items-center bg-[#553A5F] gap-[10px] px-[0.75rem] py-[0.1875rem] rounded-[5px] w-[fit-content] mt-[1.125rem]`}>
+								<h1 className='text-[0.75rem] tracking-[5px] text-[#d47af5] leading-[1rem] font-[700]'>PITCH DECK</h1>
 								<LazyLoadCommon>
 									<Image
 										width={10}
@@ -130,9 +129,9 @@ export default function Footer() {
 							</button>
 							<button
 								itemProp='white-paper'
-								className={`${styles['footer-btn']} mt-[1.125rem]`}
+								className={`flex items-center bg-[#553A5F] gap-[10px] px-[0.75rem] py-[0.1875rem] rounded-[5px] w-[fit-content] mt-[1.125rem]`}
 							>
-								<h1 className={styles['footer-btn_label']}>WHITE PAPER</h1>
+								<h1 className='text-[0.75rem] tracking-[5px] text-[#d47af5] leading-[1rem] font-[700]'>WHITE PAPER</h1>
 								<LazyLoadCommon>
 									<Image
 										width={10}
@@ -146,7 +145,7 @@ export default function Footer() {
 					</div>
 				</div>
 
-				<div className={styles['footer-2']}>
+				<div className='mt-[2rem] footer w-screen h-[7.9375rem] desktop:h-[unset] desktop:w-[unset] grow-[1] items-center justify-between py-[32px] desktop:py-[unset] flex-col desktop:flex-row flex desktop:mt-[3rem]'>
 					<h1 className='opacity-50 text-white text-[0.875rem]'>
 						©2022 Galactix Zone. All rights reserved
 					</h1>
