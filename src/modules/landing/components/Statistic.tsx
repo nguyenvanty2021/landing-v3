@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import LazyLoadCommon from 'common/components/lazyLoad';
 import React, { useMemo } from 'react';
-import styles from '../style/statistic.module.scss';
 export default function Statistic() {
 	const statisticBoxes = useMemo(() => {
 		return [
@@ -33,7 +32,7 @@ export default function Statistic() {
 	}, []);
 
 	return (
-		<section className={styles['statistic-container']}>
+		<section className='desktop:px-[unset] flex flex-col items-center w-full mt-[3.4375rem] desktop:mt-[1rem] px-[2rem]'>
 			<div className={`w-[1.9169rem] h-[4.375rem] object-contain`}>
 				<LazyLoadCommon>
 					<Image
@@ -44,7 +43,7 @@ export default function Statistic() {
 					/>
 				</LazyLoadCommon>
 			</div>
-			<div className={styles['statistic-list']}>
+			<div className='flex flex-col w-full mt-[2.375rem] justify-center items-center desktop:flex-row'>
 				{statisticBoxes.map((box, index) => (
 					<StatisticBox key={index} {...box} />
 				))}
@@ -67,15 +66,15 @@ function StatisticBox({
 			itemScope
 			itemType='http://schema.org/Organization'
 			id='whitepaper'
-			className={styles['statistic-box']}
+			className='desktop:mr-[1.875rem] last:mb-[0] desktop:last:mb-[unset] last:mr-[0] aspect-[1] desktop:aspect-[unset] bg-[#3A2C3E] backdrop-blur-[10px] grow-[0] order-[0] flex-none rounded-[20px] py-[3.125rem] px-[1.9375rem] flex flex-col justify-center items-center h-[19.4375rem] desktop:h-[15.625rem] w-[19.4375rem] desktop:w-[16.4375rem] mb-[30px] desktop:mb-[unset] '
 		>
 			<div className='w-[4.5rem] h-[4.5rem]'>
 				<LazyLoadCommon>
-					<Image width={width} height={60} src={icon} alt={icon} />
+					<Image width={width} className='flex-[none] order-[0] grow-[0]' height={60} src={icon} alt={icon} />
 				</LazyLoadCommon>
 			</div>
-			<p className={styles['statistic-box_value']}>123</p>
-			<p className={styles['statistic-box_label']}>{label}</p>
+			<p className='flex text-center text-white flex-none order-[0] grow-[0] mt-[1.25rem] leading-[42px] text-[2rem] font-[600]'>123</p>
+			<p className='flex text-center flex-none order-[1] grow-[0] opacity-[0.6] text-white leading-[24px] text-[1rem]'>{label}</p>
 		</div>
 	);
 }
