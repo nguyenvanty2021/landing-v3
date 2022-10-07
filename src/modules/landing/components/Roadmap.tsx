@@ -2,7 +2,8 @@ import LazyLoadCommon from 'common/components/lazyLoad';
 import Image from 'next/image';
 import React from 'react';
 import styles from '../style/roadmap.module.scss';
-
+import { useMediaQuery } from 'react-responsive'
+import { BREAK_POINT } from 'common/constants';
 interface Timeline {
 	imgSrc: string;
 	imgStyle?: any;
@@ -14,11 +15,12 @@ interface Timeline {
 }
 
 export default function Roadmap() {
+	const isTabletOrMobile = useMediaQuery({ maxWidth: BREAK_POINT.SM_TABLET })
 	const timelines: Timeline[] = [
 		{
-			imgSrc: '/images/roadmap_1.svg',
-			width: 560,
-			height: 448,
+			imgSrc: isTabletOrMobile ? '/images/roadmap_1Mobile.svg' : '/images/roadmap_1.svg',
+			width: isTabletOrMobile ? 375.37 : 560,
+			height: isTabletOrMobile ? 298 : 448,
 			imgStyle: {
 				marginLeft: '3rem',
 			},
@@ -33,9 +35,9 @@ export default function Roadmap() {
 			position: 'left',
 		},
 		{
-			imgSrc: '/images/roadmap_2.svg',
-			width: 384,
-			height: 432,
+			imgSrc: isTabletOrMobile ? '/images/roadmap_2Mobile.svg' : '/images/roadmap_2.svg',
+			width: isTabletOrMobile ? 375.37 : 384,
+			height: isTabletOrMobile ? 298 : 432,
 			imgStyle: {
 				marginRight: '7.6875rem',
 			},
@@ -54,9 +56,9 @@ export default function Roadmap() {
 			position: 'right',
 		},
 		{
-			imgSrc: '/images/roadmap_3.svg',
-			width: 544,
-			height: 496,
+			imgSrc: isTabletOrMobile ? '/images/roadmap_3Mobile.svg' : '/images/roadmap_3.svg',
+			width: isTabletOrMobile ? 375.37 : 544,
+			height: isTabletOrMobile ? 298 : 496,
 			imgStyle: {
 				marginLeft: '6.5rem',
 			},
@@ -77,9 +79,9 @@ export default function Roadmap() {
 			position: 'left',
 		},
 		{
-			imgSrc: '/images/roadmap_4.svg',
-			width: 320,
-			height: 384,
+			imgSrc: isTabletOrMobile ? '/images/roadmap_4Mobile.svg' : '/images/roadmap_4.svg',
+			width: isTabletOrMobile ? 375.37 : 320,
+			height: isTabletOrMobile ? 298 : 384,
 			imgStyle: {
 				marginRight: '6.8125rem',
 			},
@@ -96,9 +98,9 @@ export default function Roadmap() {
 			position: 'right',
 		},
 		{
-			imgSrc: '/images/roadmap_5.svg',
-			width: 720,
-			height: 448,
+			imgSrc: isTabletOrMobile ? '/images/roadmap_5Mobile.svg' : '/images/roadmap_5.svg',
+			width: isTabletOrMobile ? 375.37 : 720,
+			height: isTabletOrMobile ? 298 : 448,
 			title: 'Q3 2023',
 			descriptions: [
 				'Game UAT (continue)',
@@ -114,9 +116,9 @@ export default function Roadmap() {
 			position: 'left',
 		},
 		{
-			imgSrc: '/images/roadmap_6.svg',
-			width: 432,
-			height: 400,
+			imgSrc: isTabletOrMobile ? '/images/roadmap_6Mobile.svg' : '/images/roadmap_6.svg',
+			width: isTabletOrMobile ? 375.37 : 432,
+			height: isTabletOrMobile ? 298 : 400,
 			imgStyle: {
 				marginRight: '6rem',
 			},
