@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import LazyLoadCommon from 'common/components/lazyLoad';
 import React, { useMemo } from 'react';
 export default function Statistic() {
@@ -34,10 +35,12 @@ export default function Statistic() {
 		<section className='desktop:px-[unset] flex flex-col items-center w-full mt-[3.4375rem] desktop:mt-[1rem] px-[2rem]'>
 			<div className={`w-[1.9169rem] h-[4.375rem] object-contain`}>
 				<LazyLoadCommon>
-					<img
+					<Image
+						width={30.67}
+						height={70}
 						src='/images/roadmap_0.svg'
 						alt='roadmap'
-						className='object-contain w-[30.67px] h-[70px]'
+						objectFit='contain'
 					/>
 				</LazyLoadCommon>
 			</div>
@@ -68,19 +71,11 @@ function StatisticBox({
 		>
 			<div className='w-[4.5rem] flex justify-center h-[4.5rem]'>
 				<LazyLoadCommon>
-					<img
-						className={`flex-[none] order-[0] grow-[0] object-contain h-[60px] w-[${width}px]`}
-						src={icon}
-						alt={icon}
-					/>
+					<Image width={width} objectFit='contain' className='flex-[none] order-[0] grow-[0]' height={60} src={icon} alt={icon} />
 				</LazyLoadCommon>
 			</div>
-			<p className='flex text-center text-white flex-none order-[0] grow-[0] mt-[1.25rem] leading-[42px] text-[2rem] font-[600]'>
-				123
-			</p>
-			<p className='flex text-center flex-none order-[1] grow-[0] opacity-[0.6] text-white leading-[24px] text-[1rem]'>
-				{label}
-			</p>
+			<p className='flex text-center text-white flex-none order-[0] grow-[0] mt-[1.25rem] leading-[42px] text-[2rem] font-[600]'>123</p>
+			<p className='flex text-center flex-none order-[1] grow-[0] opacity-[0.6] text-white leading-[24px] text-[1rem]'>{label}</p>
 		</div>
 	);
 }
