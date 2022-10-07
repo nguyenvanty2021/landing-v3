@@ -1,6 +1,8 @@
-import LazyLoadCommon from 'common/components/lazyLoad';
-import Image from 'next/image';
+// import LazyLoadCommon from 'common/components/lazyLoad';
+// import Image from 'next/image';
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import styles from '../style/roadmap.module.scss';
 import { useMediaQuery } from 'react-responsive'
 import { BREAK_POINT } from 'common/constants';
@@ -186,9 +188,19 @@ function TimelineSection({ timeline }: { timeline: Timeline }) {
 			</div>
 			<div className={`${styles['timeline-img']} ${styles[imgClass]}`}>
 				<div className={`${imgStyle} ldPhone:flex ldPhone:justify-center ldPhone:w-full ldPhone:mx-[auto]`}>
-					<LazyLoadCommon>
+					{/* <LazyLoadCommon>
 						<Image height={height} objectFit='contain' width={width} src={imgSrc} alt='logo' />
-					</LazyLoadCommon>
+					</LazyLoadCommon> */}
+					<LazyLoadImage
+							alt='logo'
+							height={height}
+							src={imgSrc}
+							width={width}
+							placeholderSrc='/images/about-section.svg'
+							effect='blur'
+							threshold={100}
+							useIntersectionObserver={true}
+						/>
 				</div>
 			</div>
 		</div>
