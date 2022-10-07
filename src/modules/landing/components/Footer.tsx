@@ -116,7 +116,7 @@ export default function Footer() {
 							itemType='http://schema.org/Organization'
 							className='mt-[3.75rem] desktop:mt-[unset] flex flex-col'
 						>
-							<button itemProp='pitch-deck' className={`flex items-center bg-[#553A5F] gap-[10px] px-[0.75rem] py-[0.1875rem] rounded-[5px] w-[fit-content] mt-[1.125rem]`}>
+							<button itemProp='pitch-deck' className={`flex items-center bg-[#553A5F] gap-[10px] px-[0.75rem] py-[0.1875rem] rounded-[5px] w-[fit-content]`}>
 								<h1 className='text-[0.75rem] tracking-[5px] text-[#d47af5] leading-[1rem] font-[700]'>PITCH DECK</h1>
 								<LazyLoadCommon>
 									<Image
@@ -157,7 +157,7 @@ export default function Footer() {
 					>
 						<a
 							itemProp='facebook'
-							className='w-[1.5625rem] h-[1.5625rem] ml-[1.8125rem]'
+							className='w-[1.5625rem] h-[1.5625rem]'
 						>
 							<LazyLoadCommon>
 								<Image
@@ -170,7 +170,7 @@ export default function Footer() {
 						</a>
 						<a
 							itemProp='telegram'
-							className='w-[1.5625rem] h-[1.5625rem] ml-[1.8125rem]'
+							className='w-[1.5625rem] h-[1.5625rem] mx-[1.8125rem]'
 						>
 							<LazyLoadCommon>
 								<Image
@@ -183,7 +183,7 @@ export default function Footer() {
 						</a>
 						<a
 							itemProp='twitter'
-							className='w-[1.5625rem] h-[1.5625rem] ml-[1.8125rem]'
+							className='w-[1.5625rem] h-[1.5625rem]'
 						>
 							<LazyLoadCommon>
 								<Image

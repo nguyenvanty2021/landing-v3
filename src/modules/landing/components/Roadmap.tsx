@@ -164,7 +164,7 @@ function TimelineSection({ timeline }: { timeline: Timeline }) {
 			<div
 				itemScope
 				itemType='http://schema.org/Organization'
-				className={`${styles['timeline-box']} ${styles[boxClass]}`}
+				className={`${styles['timeline-box']} ${styles[boxClass]} tablet:max-w-[unset] ldPhone:max-w-[500px] mdPhone:max-w-[400px] smPhone:max-w-[300px] desktop:max-w-[unset] smPhone:justify-center ldPhone:flex ldPhone:w-full smPhone:mx-[auto]`}
 			>
 				<h1 itemProp='title' className={styles['timeline-title']}>
 					{title}
@@ -183,7 +183,7 @@ function TimelineSection({ timeline }: { timeline: Timeline }) {
 				</ul>
 			</div>
 			<div className={`${styles['timeline-img']} ${styles[imgClass]}`}>
-				<div style={imgStyle}>
+				<div className={`${imgStyle} ldPhone:flex ldPhone:justify-center ldPhone:w-full ldPhone:mx-[auto]`}>
 					<LazyLoadCommon>
 						<Image height={height} width={width} src={imgSrc} alt='logo' />
 					</LazyLoadCommon>

@@ -27,7 +27,7 @@ export default function Header() {
 	];
 	return (
 		<header
-			className='flex h-[5rem] relative items-center w-full justify-between py-[1rem] px-[2rem] desktop:p-[unset] desktop:h-[6.875rem]'
+			className='flex h-[5rem] relative items-center w-full justify-between p-[1rem] desktop:p-[unset] desktop:h-[6.875rem]'
 			id='header'
 		>
 			<div className='desktop:ml-[9.375rem] relative h-full w-[3.125rem] desktop:w-[5.625rem] '>

@@ -1,7 +1,7 @@
 import React from 'react';
 export default function PreFooter() {
 	return (
-		<section id='gxz-token' className='flex bg-no-repeat bg-cover justify-center bg-center w-full bg-preFooterMobile desktop:bg-preFooterPC h-[27.375rem] px-[2rem] desktop:px-[unset] items-start desktop:items-center'>
+		<section id='gxz-token' className='flex bg-no-repeat bg-cover justify-center bg-center w-full bg-preFooterMobile desktop:bg-preFooterPC smPhone:h-[27.375rem] mdPhone:h-[27.375rem] ldPhone:h-[22.375rem]  tablet:h-[18.375rem] smDesktop:h-[20.375rem] desktop:h-[27.375rem] px-[2rem] desktop:px-[unset] items-start desktop:items-center'>
 			<div
 				itemScope
 				itemType='http://schema.org/Organization'
@@ -9,7 +9,7 @@ export default function PreFooter() {
 			>
 				<h2
 					itemProp='content'
-					className='text-[2rem] leading-[2.625rem] text-[#d47af5] text-center desktop:leading-[2.8125rem] font-[600] desktop:font-[500] w-[19.4375rem] desktop:w-[46.25rem] desktop:text-[1.875rem]'
+					className='text-[2rem] leading-[2.625rem] text-[#d47af5] text-center desktop:leading-[2.8125rem] font-[600] desktop:font-[500] tablet:w-[45.4375rem] smDesktop:w-[50.4375rem] desktop:w-[46.25rem] desktop:text-[1.875rem]'
 				>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
 					vulputate libero et velit interdum, ac aliquet odio mattis.

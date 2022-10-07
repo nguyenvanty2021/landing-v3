@@ -37,7 +37,7 @@ export default function LandingPage() {
 			/>
 			<div className='max-w-[100%] scrollbar-width scrollbar-medium overflow-hidden bg-[#0c1e32] '>
 				<div className='bg-repeat flex items-center bg-landing flex-col bg-center backgroundSizeMobile desktop:bg-contain'>
-					<div className='desktop:max-w-[90rem] mobile:max-w-[100vw]'>
+					<div className='desktop:max-w-[90rem] w-full mobile:max-w-[100vw]'>
 						<Header />
 						<main>
 							<About />

@@ -43,7 +43,7 @@ export default function Statistic() {
 					/>
 				</LazyLoadCommon>
 			</div>
-			<div className='flex flex-col w-full mt-[2.375rem] justify-center items-center desktop:flex-row'>
+			<div className='desktop:flex grid tablet:grid-cols-2 flex-col tablet:w-[unset] gap-[30px] desktop:gap-[unset] justify-center items-center desktop:w-full mt-[2.375rem] desktop:flex-row'>
 				{statisticBoxes.map((box, index) => (
 					<StatisticBox key={index} {...box} />
 				))}
@@ -66,7 +66,7 @@ function StatisticBox({
 			itemScope
 			itemType='http://schema.org/Organization'
 			id='whitepaper'
-			className='desktop:mr-[1.875rem] last:mb-[0] desktop:last:mb-[unset] last:mr-[0] aspect-[1] desktop:aspect-[unset] grow-[0] order-[0] flex-none backgroundStatistic py-[3.125rem] px-[1.9375rem] flex flex-col justify-center items-center h-[19.4375rem] desktop:h-[15.625rem] w-[19.4375rem] desktop:w-[16.4375rem] mb-[30px] desktop:mb-[unset] '
+			className='desktop:mr-[1.875rem] last:mb-[0] desktop:last:mb-[unset] last:mr-[0] aspect-[1] desktop:aspect-[unset] grow-[0] order-[0] flex-none backgroundStatistic py-[3.125rem] px-[1.9375rem] flex flex-col justify-center items-center h-[19.4375rem] desktop:h-[15.625rem] w-[19.4375rem] desktop:w-[16.4375rem] desktop:mb-[unset] '
 		>
 			<div className='w-[4.5rem] flex justify-center h-[4.5rem]'>
 				<LazyLoadCommon>

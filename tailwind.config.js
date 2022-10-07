@@ -20,14 +20,17 @@ module.exports = {
 			//
 			// desktop: '1280px',
 			// // => @media (min-width: 1280px) { ... }
-
+			smPhone: '375px',
+			mdPhone: '475px',
+			ldPhone: '576px',
 			mobile: '640px',
 			// => @media (min-width: 320px) { ... }
 
 			tablet: '768px',
 			// => @media (min-width: 1024px) { ... }
-
-			desktop: '1024px',
+			mTablet: '992px',
+			smDesktop: '1024px',
+			desktop: '1280px',
 			// => @media (min-width: 1280px) { ... }
 		},
 

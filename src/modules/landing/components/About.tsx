@@ -8,7 +8,7 @@ export default function About() {
 					<div
 						itemScope
 						itemType='http://schema.org/Organization'
-						className='flex flex-col mr-[5rem] items-start desktop:items-end w-full desktop:w-[31rem]'
+						className='flex flex-col mr-[5rem] tablet:max-w-[unset] ldPhone:max-w-[500px] smPhone:mx-[auto] mdPhone:max-w-[400px] smPhone:max-w-[300px] items-start desktop:items-end w-full desktop:w-[31rem]'
 					>
 						<h1
 							itemProp='title'
@@ -44,7 +44,7 @@ export default function About() {
 					</div>
 				</div>
 				<div className='w-full desktop:w-[50%] flex justify-center desktop:justify-start'>
-					<div className='w-[46.125rem]'>
+					<div className='w-[46.125rem] flex justify-center desktop:justify-start '>
 						<LazyLoadCommon>
 							<Image
 								src='/images/about-section.svg'
