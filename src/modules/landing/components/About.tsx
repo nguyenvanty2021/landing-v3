@@ -1,4 +1,5 @@
-
+import LazyLoadCommon from 'common/components/lazyLoad';
+import { BREAK_POINT } from 'common/constants';
 export default function About() {
 	return (
 		<section id='about'>
@@ -47,7 +48,23 @@ export default function About() {
 				</div>
 				<div className='w-full desktop:w-[50%] flex justify-center desktop:justify-start'>
 					<div className='w-[46.125rem] flex h-[350px] mTablet:h-[unset] justify-center desktop:justify-start '>
-
+						<LazyLoadCommon>
+							<picture>
+								<source
+									media={`(min-width: ${BREAK_POINT.M_TABLET}px)`}
+									srcSet='/images/about-section.svg'
+								/>
+								<source
+									media={`(max-width: ${BREAK_POINT.SM_TABLET}px)`}
+									srcSet='/images/about-sectionMobile.svg'
+								/>
+								<img
+									src='/images/about-section.svg'
+									alt='logo'
+									className='w-[766px] h-[604.52px] object-contain'
+								/>
+							</picture>
+						</LazyLoadCommon>
 					</div>
 				</div>
 			</div>
