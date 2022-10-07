@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import LazyLoadCommon from 'common/components/lazyLoad';
-import { ROUTES } from 'common/constants';
+import { BREAK_POINT, ROUTES } from 'common/constants';
 export default function Header() {
 	const listMenu = [
 		{
@@ -35,12 +35,21 @@ export default function Header() {
 					<Link href={ROUTES.LANDING} passHref>
 						<a>
 							<LazyLoadCommon>
-								<Image
-									src='/images/logo.svg'
-									alt='logo'
-									height={86.38}
-									width={90}
-								/>
+								<picture>
+									<source
+										media={`(min-width: ${BREAK_POINT.M_TABLET}px)`}
+										srcSet='/images/logo.svg'
+									/>
+									<source
+										media={`(max-width: ${BREAK_POINT.SM_TABLET}px)`}
+										srcSet='/images/logoMobile.svg'
+									/>
+									<img
+										src='/images/logo.svg'
+										alt='logo'
+										className='w-[90px] h-[86.38px] object-contain'
+									/>
+								</picture>
 							</LazyLoadCommon>
 						</a>
 					</Link>
@@ -78,7 +87,10 @@ export default function Header() {
 							</li>
 						);
 					})}
-				<button itemProp='launch-app' className='font-[600] bg-header rounded-[40px] text-white text-[1.125rem] py-[0.75rem] px-[1.375rem]'>
+				<button
+					itemProp='launch-app'
+					className='font-[600] bg-header rounded-[40px] text-white text-[1.125rem] py-[0.75rem] px-[1.375rem]'
+				>
 					Launch App
 				</button>
 			</ul>

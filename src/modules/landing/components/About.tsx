@@ -1,5 +1,5 @@
 import LazyLoadCommon from 'common/components/lazyLoad';
-import Image from 'next/image';
+import { BREAK_POINT } from 'common/constants';
 export default function About() {
 	return (
 		<section id='about'>
@@ -23,7 +23,10 @@ export default function About() {
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
 							vulputate libero et velit interdum, ac aliquet odio mattis.
 						</h2>
-						<h2 itemProp='description' className='leading-[1.375rem] mt-[1.25rem] text-white text-[0.875rem] opacity-[0.8] text-left desktop:text-right'>
+						<h2
+							itemProp='description'
+							className='leading-[1.375rem] mt-[1.25rem] text-white text-[0.875rem] opacity-[0.8] text-left desktop:text-right'
+						>
 							per inceptos himenaeos. Curabitur tempus urna at turpis
 							condimentum lobortis. Ut commodo efficitur neque. Ut diam quam,
 							semper iaculis condimentum ac, vestibulum eu nisl.Lorem ipsum
@@ -46,12 +49,21 @@ export default function About() {
 				<div className='w-full desktop:w-[50%] flex justify-center desktop:justify-start'>
 					<div className='w-[46.125rem] flex justify-center desktop:justify-start '>
 						<LazyLoadCommon>
-							<Image
-								src='/images/about-section.svg'
-								alt='logo'
-								height={604.52}
-								width={766}
-							/>
+							<picture>
+								<source
+									media={`(min-width: ${BREAK_POINT.M_TABLET}px)`}
+									srcSet='/images/about-section.svg'
+								/>
+								<source
+									media={`(max-width: ${BREAK_POINT.SM_TABLET}px)`}
+									srcSet='/images/about-sectionMobile.svg'
+								/>
+								<img
+									src='/images/about-section.svg'
+									alt='logo'
+									className='w-[766px] h-[604.52px] object-contain'
+								/>
+							</picture>
 						</LazyLoadCommon>
 					</div>
 				</div>
