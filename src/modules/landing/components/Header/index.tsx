@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ROUTES } from 'common/constants';
-import LazyLoadImageComp from 'common/components/lazyLoadImage';
+import Image from 'next/image';
 export default function Header() {
 	const listMenu = [
 		{
@@ -33,13 +33,12 @@ export default function Header() {
 				<div className='h-[4.125rem] absolute w-full bottom-0 desktop:h-[5.3987rem] desktop:mb-[0.2263rem]'>
 					<Link href={ROUTES.LANDING} passHref>
 						<a>
-							<LazyLoadImageComp
+							<Image
 								src='/images/logo.svg'
 								alt='logo'
+								objectFit='contain'
 								height={86.38}
 								width={90}
-								placeholderSrc='/images/logo.svg'
-								effect='blur'
 							/>
 						</a>
 					</Link>
@@ -47,13 +46,12 @@ export default function Header() {
 			</div>
 			<div className='w-[3rem] h-full justify-end desktop:justify-start items-center desktop:items-start desktop:h-[unset] flex desktop:hidden desktop:w-[unset] '>
 				<button>
-					<LazyLoadImageComp
+					<Image
 						src='/icons/header_1.svg'
 						alt='logo'
+						objectFit='contain'
 						width={30}
 						height={30}
-						placeholderSrc='/icons/header_1.svg'
-						effect='blur'
 					/>
 				</button>
 			</div>

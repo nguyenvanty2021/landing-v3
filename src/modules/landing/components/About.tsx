@@ -1,4 +1,4 @@
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Image from 'next/image';
 export default function About() {
 	return (
 		<section id='about'>
@@ -47,13 +47,12 @@ export default function About() {
 				</div>
 				<div className='w-full desktop:w-[50%] flex justify-center desktop:justify-start'>
 					<div className='w-[46.125rem] flex h-[350px] mTablet:h-[unset] justify-center desktop:justify-start '>
-						<LazyLoadImage
+						<Image
 							alt='logo'
 							height={604.52}
 							src='/images/about-section.svg'
 							width={766}
-							placeholderSrc='/images/about-section.svg'
-							effect='blur'
+							objectFit='contain'
 						/>
 					</div>
 				</div>

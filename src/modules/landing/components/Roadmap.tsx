@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import styles from '../style/roadmap.module.scss';
 interface Timeline {
 	imgSrc: string;
@@ -184,13 +184,12 @@ function TimelineSection({ timeline }: { timeline: Timeline }) {
 				<div
 					className={`${imgStyle} ldPhone:flex ldPhone:justify-center ldPhone:w-full ldPhone:mx-[auto]`}
 				>
-					<LazyLoadImage
+					<Image
 						alt='logo'
 						height={height}
 						src={imgSrc}
 						width={width}
-						placeholderSrc={imgSrc}
-						effect='blur'
+						objectFit='contain'
 					/>
 				</div>
 			</div>

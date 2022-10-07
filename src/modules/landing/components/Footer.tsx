@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { ROUTES } from 'common/constants';
-import LazyLoadImageComp from 'common/components/lazyLoadImage';
+import Image from 'next/image';
 type ListIntroduceProps = {
 	id: number;
 	content: {
@@ -71,13 +71,12 @@ export default function Footer() {
 					<div className='w-[8.125rem] h-[8.125rem]'>
 						<Link href={ROUTES.LANDING} passHref>
 							<a>
-								<LazyLoadImageComp
+								<Image
 									src='/images/logo.svg'
 									alt='logo'
 									width={130}
+									objectFit='contain'
 									height={124.77}
-									placeholderSrc='/images/logo.svg'
-									effect='blur'
 								/>
 							</a>
 						</Link>
@@ -122,13 +121,12 @@ export default function Footer() {
 								<h1 className='text-[0.75rem] tracking-[5px] text-[#d47af5] leading-[1rem] font-[700]'>
 									PITCH DECK
 								</h1>
-								<LazyLoadImageComp
+								<Image
 									width={10}
 									height={10}
 									src='/icons/arrow-right.svg'
 									alt='logo'
-									placeholderSrc='/icons/arrow-right.svg'
-									effect='blur'
+									objectFit='contain'
 								/>
 							</button>
 							<button
@@ -138,13 +136,12 @@ export default function Footer() {
 								<h1 className='text-[0.75rem] tracking-[5px] text-[#d47af5] leading-[1rem] font-[700]'>
 									WHITE PAPER
 								</h1>
-								<LazyLoadImageComp
+								<Image
 									width={10}
 									height={10}
 									src='/icons/arrow-right.svg'
 									alt='logo'
-									placeholderSrc='/icons/arrow-right.svg'
-									effect='blur'
+									objectFit='contain'
 								/>
 							</button>
 						</div>
@@ -162,36 +159,33 @@ export default function Footer() {
 						className='flex'
 					>
 						<a itemProp='facebook' className='w-[1.5625rem] h-[1.5625rem]'>
-							<LazyLoadImageComp
+							<Image
 								src='/icons/facebook.svg'
 								alt='facebook'
 								width={30}
 								height={30}
-								placeholderSrc='/icons/facebook.svg'
-								effect='blur'
+								objectFit='contain'
 							/>
 						</a>
 						<a
 							itemProp='telegram'
 							className='w-[1.5625rem] h-[1.5625rem] mx-[1.8125rem]'
 						>
-							<LazyLoadImageComp
+							<Image
 								src='/icons/telegram.svg'
 								alt='telegram'
 								width={25}
 								height={22.5}
-								placeholderSrc='/icons/facebook.svg'
-								effect='blur'
+								objectFit='contain'
 							/>
 						</a>
 						<a itemProp='twitter' className='w-[1.5625rem] h-[1.5625rem]'>
-							<LazyLoadImageComp
+							<Image
 								src='/icons/twitter.svg'
 								alt='twitter'
 								width={27.31}
 								height={22.5}
-								placeholderSrc='/icons/facebook.svg'
-								effect='blur'
+								objectFit='contain'
 							/>
 						</a>
 					</div>
