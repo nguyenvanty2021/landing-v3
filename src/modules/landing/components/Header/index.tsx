@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { ROUTES } from 'common/constants';
 import Image from 'next/image';
+import LazyLoadCommon from 'common/components/lazyLoad';
+import { BREAK_POINT, ROUTES } from 'common/constants';
 export default function Header() {
 	const listMenu = [
 		{
@@ -33,26 +34,38 @@ export default function Header() {
 				<div className='h-[4.125rem] absolute w-full bottom-0 desktop:h-[5.3987rem] desktop:mb-[0.2263rem]'>
 					<Link href={ROUTES.LANDING} passHref>
 						<a>
-							<Image
-								src='/images/logo.svg'
-								alt='logo'
-								objectFit='contain'
-								height={86.38}
-								width={90}
-							/>
+							<LazyLoadCommon>
+								<picture>
+									<source
+										media={`(min-width: ${BREAK_POINT.M_TABLET}px)`}
+										srcSet='/images/logo.svg'
+									/>
+									<source
+										media={`(max-width: ${BREAK_POINT.SM_TABLET}px)`}
+										srcSet='/images/logoMobile.svg'
+									/>
+									<img
+										src='/images/logo.svg'
+										alt='logo'
+										className='w-[90px] h-[86.38px] object-contain'
+									/>
+								</picture>
+							</LazyLoadCommon>
 						</a>
 					</Link>
 				</div>
 			</div>
 			<div className='w-[3rem] h-full justify-end desktop:justify-start items-center desktop:items-start desktop:h-[unset] flex desktop:hidden desktop:w-[unset] '>
 				<button>
-					<Image
-						src='/icons/header_1.svg'
-						alt='logo'
-						objectFit='contain'
-						width={30}
-						height={30}
-					/>
+					<LazyLoadCommon>
+						<Image
+							width={30}
+							height={30}
+							src='/icons/header_1.svg'
+							alt='logo'
+							objectFit='contain'
+						/>
+					</LazyLoadCommon>
 				</button>
 			</div>
 			<ul
