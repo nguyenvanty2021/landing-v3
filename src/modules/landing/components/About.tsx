@@ -1,5 +1,5 @@
-import LazyLoadCommon from 'common/components/lazyLoad';
-import { BREAK_POINT } from 'common/constants';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 export default function About() {
 	return (
 		<section id='about'>
@@ -48,7 +48,7 @@ export default function About() {
 				</div>
 				<div className='w-full desktop:w-[50%] flex justify-center desktop:justify-start'>
 					<div className='w-[46.125rem] flex h-[350px] mTablet:h-[unset] justify-center desktop:justify-start '>
-						<LazyLoadCommon>
+						{/* <LazyLoad height={762} width={400}  >
 							<picture>
 								<source
 									media={`(min-width: ${BREAK_POINT.M_TABLET}px)`}
@@ -63,8 +63,17 @@ export default function About() {
 									alt='logo'
 									className='w-[766px] h-[604.52px] object-contain'
 								/>
-							</picture>
-						</LazyLoadCommon>
+							</picture> */}
+						<LazyLoadImage
+							alt='logo'
+							height='766px'
+							src='/images/about-section.svg'
+							width='604.52px'
+							placeholderSrc='/images/about-section.svg'
+							effect='blur'
+							threshold={100}
+							useIntersectionObserver={true}
+						/>
 					</div>
 				</div>
 			</div>
