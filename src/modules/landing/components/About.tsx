@@ -47,7 +47,7 @@ export default function About() {
 					</div>
 				</div>
 				<div className='w-full desktop:w-[50%] flex justify-center desktop:justify-start'>
-					<div className='w-[46.125rem] flex justify-center desktop:justify-start '>
+					<div className='w-[46.125rem] flex h-[350px] mTablet:h-[unset] justify-center desktop:justify-start '>
 						<LazyLoadCommon>
 							<picture>
 								<source

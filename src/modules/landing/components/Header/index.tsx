@@ -31,7 +31,7 @@ export default function Header() {
 			id='header'
 		>
 			<div className='desktop:ml-[9.375rem] relative h-full w-[3.125rem] desktop:w-[5.625rem] '>
-				<div className='h-[3.125rem] absolute w-full bottom-0 desktop:h-[5.3987rem] desktop:mb-[0.2263rem]'>
+				<div className='h-[4.125rem] absolute w-full bottom-0 desktop:h-[5.3987rem] desktop:mb-[0.2263rem]'>
 					<Link href={ROUTES.LANDING} passHref>
 						<a>
 							<LazyLoadCommon>
