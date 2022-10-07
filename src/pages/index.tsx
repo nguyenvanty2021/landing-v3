@@ -1,6 +1,8 @@
 import HelmetCommon from 'common/components/helmet';
-import React from 'react';
+import React, { useEffect } from 'react';
 import dynamic from 'next/dynamic';
+import ReactGa from 'react-ga';
+import { useRouter } from 'next/router';
 export const ROUTES = {
 	TOKEN_PRESALE_ROUNDS: '/token-presale-rounds',
 	TOKEN_PRESALE_ROUNDS_DETAIL: '/token-presale-rounds/detail',
@@ -29,6 +31,13 @@ const Statistic = dynamic(
 	() => import('./../modules/landing/components/Statistic')
 );
 export default function LandingPage() {
+	const router = useRouter();
+	useEffect(() => {
+		ReactGa.initialize(process?.env?.NEXT_PUBLIC_GA_TRACKING_CODE || '');
+		// to report page view Google Analytics
+		ReactGa.pageview(router?.pathname || '');
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 	return (
 		<>
 			<HelmetCommon
