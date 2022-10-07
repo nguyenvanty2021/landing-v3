@@ -66,9 +66,9 @@ function StatisticBox({
 			itemScope
 			itemType='http://schema.org/Organization'
 			id='whitepaper'
-			className='desktop:mr-[1.875rem] last:mb-[0] desktop:last:mb-[unset] last:mr-[0] aspect-[1] desktop:aspect-[unset] bg-[#3A2C3E] backdrop-blur-[10px] grow-[0] order-[0] flex-none rounded-[20px] py-[3.125rem] px-[1.9375rem] flex flex-col justify-center items-center h-[19.4375rem] desktop:h-[15.625rem] w-[19.4375rem] desktop:w-[16.4375rem] mb-[30px] desktop:mb-[unset] '
+			className='desktop:mr-[1.875rem] last:mb-[0] desktop:last:mb-[unset] last:mr-[0] aspect-[1] desktop:aspect-[unset] grow-[0] order-[0] flex-none backgroundStatistic py-[3.125rem] px-[1.9375rem] flex flex-col justify-center items-center h-[19.4375rem] desktop:h-[15.625rem] w-[19.4375rem] desktop:w-[16.4375rem] mb-[30px] desktop:mb-[unset] '
 		>
-			<div className='w-[4.5rem] h-[4.5rem]'>
+			<div className='w-[4.5rem] flex justify-center h-[4.5rem]'>
 				<LazyLoadCommon>
 					<Image width={width} className='flex-[none] order-[0] grow-[0]' height={60} src={icon} alt={icon} />
 				</LazyLoadCommon>

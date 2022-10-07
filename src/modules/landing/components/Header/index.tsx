@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import LazyLoadCommon from 'common/components/lazyLoad';
-import { ROUTES } from 'pages';
+import { ROUTES } from 'common/constants';
 export default function Header() {
 	const listMenu = [
 		{

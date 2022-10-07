@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 import LazyLoadCommon from 'common/components/lazyLoad';
-import { ROUTES } from 'pages';
+import { ROUTES } from 'common/constants';
 type ListIntroduceProps = {
 	id: number;
 	content: {

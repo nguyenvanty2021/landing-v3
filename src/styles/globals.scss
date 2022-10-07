@@ -16,6 +16,11 @@
 	.footer {
 		border-top: 1px solid rgba(255, 255, 255, 0.2);
 	}
+	.backgroundStatistic {
+		background: rgba(212, 122, 245, 0.15);
+		backdrop-filter: blur(10px);
+		border-radius: 20px;
+	}
 	.gradient-about {
 		background: linear-gradient(
 			102.92deg,
