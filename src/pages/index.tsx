@@ -2,6 +2,7 @@ import HelmetCommon from 'common/components/helmet';
 import React, { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import ReactGa from 'react-ga';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useRouter } from 'next/router';
 import { ROUTES } from 'common/constants';
 const Header = dynamic(

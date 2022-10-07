@@ -1,9 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import Image from 'next/image';
 import React from 'react';
-import LazyLoadCommon from 'common/components/lazyLoad';
 import { ROUTES } from 'common/constants';
+import LazyLoadImageComp from 'common/components/lazyLoadImage';
 type ListIntroduceProps = {
 	id: number;
 	content: {
@@ -72,15 +71,14 @@ export default function Footer() {
 					<div className='w-[8.125rem] h-[8.125rem]'>
 						<Link href={ROUTES.LANDING} passHref>
 							<a>
-								<LazyLoadCommon>
-									<Image
-										width={130}
-										height={124.77}
-										src='/images/logo.svg'
-										alt='logo'
-										objectFit='contain'
-									/>
-								</LazyLoadCommon>
+								<LazyLoadImageComp
+									src='/images/logo.svg'
+									alt='logo'
+									width={130}
+									height={124.77}
+									placeholderSrc='/images/logo.svg'
+									effect='blur'
+								/>
 							</a>
 						</Link>
 					</div>
@@ -117,32 +115,37 @@ export default function Footer() {
 							itemType='http://schema.org/Organization'
 							className='mt-[3.75rem] desktop:mt-[unset] flex flex-col'
 						>
-							<button itemProp='pitch-deck' className={`flex items-center bg-[#553A5F] gap-[10px] px-[0.75rem] py-[0.1875rem] rounded-[5px] w-[fit-content]`}>
-								<h1 className='text-[0.75rem] tracking-[5px] text-[#d47af5] leading-[1rem] font-[700]'>PITCH DECK</h1>
-								<LazyLoadCommon>
-									<Image
-										width={10}
-										height={10}
-										src='/icons/arrow-right.svg'
-										alt='logo'
-										objectFit='contain'
-									/>
-								</LazyLoadCommon>
+							<button
+								itemProp='pitch-deck'
+								className={`flex items-center bg-[#553A5F] gap-[10px] px-[0.75rem] py-[0.1875rem] rounded-[5px] w-[fit-content]`}
+							>
+								<h1 className='text-[0.75rem] tracking-[5px] text-[#d47af5] leading-[1rem] font-[700]'>
+									PITCH DECK
+								</h1>
+								<LazyLoadImageComp
+									width={10}
+									height={10}
+									src='/icons/arrow-right.svg'
+									alt='logo'
+									placeholderSrc='/icons/arrow-right.svg'
+									effect='blur'
+								/>
 							</button>
 							<button
 								itemProp='white-paper'
 								className={`flex items-center bg-[#553A5F] gap-[10px] px-[0.75rem] py-[0.1875rem] rounded-[5px] w-[fit-content] mt-[1.125rem]`}
 							>
-								<h1 className='text-[0.75rem] tracking-[5px] text-[#d47af5] leading-[1rem] font-[700]'>WHITE PAPER</h1>
-								<LazyLoadCommon>
-									<Image
-										width={10}
-										height={10}
-										src='/icons/arrow-right.svg'
-										alt='logo'
-										objectFit='contain'
-									/>
-								</LazyLoadCommon>
+								<h1 className='text-[0.75rem] tracking-[5px] text-[#d47af5] leading-[1rem] font-[700]'>
+									WHITE PAPER
+								</h1>
+								<LazyLoadImageComp
+									width={10}
+									height={10}
+									src='/icons/arrow-right.svg'
+									alt='logo'
+									placeholderSrc='/icons/arrow-right.svg'
+									effect='blur'
+								/>
 							</button>
 						</div>
 					</div>
@@ -158,47 +161,38 @@ export default function Footer() {
 						itemType='http://schema.org/Organization'
 						className='flex'
 					>
-						<a
-							itemProp='facebook'
-							className='w-[1.5625rem] h-[1.5625rem]'
-						>
-							<LazyLoadCommon>
-								<Image
-									src='/icons/facebook.svg'
-									alt='facebook'
-									width={30}
-									height={30}
-									objectFit='contain'
-								/>
-							</LazyLoadCommon>
+						<a itemProp='facebook' className='w-[1.5625rem] h-[1.5625rem]'>
+							<LazyLoadImageComp
+								src='/icons/facebook.svg'
+								alt='facebook'
+								width={30}
+								height={30}
+								placeholderSrc='/icons/facebook.svg'
+								effect='blur'
+							/>
 						</a>
 						<a
 							itemProp='telegram'
 							className='w-[1.5625rem] h-[1.5625rem] mx-[1.8125rem]'
 						>
-							<LazyLoadCommon>
-								<Image
-									src='/icons/telegram.svg'
-									alt='telegram'
-									width={25}
-									height={22.5}
-									objectFit='contain'
-								/>
-							</LazyLoadCommon>
+							<LazyLoadImageComp
+								src='/icons/telegram.svg'
+								alt='telegram'
+								width={25}
+								height={22.5}
+								placeholderSrc='/icons/facebook.svg'
+								effect='blur'
+							/>
 						</a>
-						<a
-							itemProp='twitter'
-							className='w-[1.5625rem] h-[1.5625rem]'
-						>
-							<LazyLoadCommon>
-								<Image
-									src='/icons/twitter.svg'
-									alt='twitter'
-									width={27.31}
-									height={22.5}
-									objectFit='contain'
-								/>
-							</LazyLoadCommon>
+						<a itemProp='twitter' className='w-[1.5625rem] h-[1.5625rem]'>
+							<LazyLoadImageComp
+								src='/icons/twitter.svg'
+								alt='twitter'
+								width={27.31}
+								height={22.5}
+								placeholderSrc='/icons/facebook.svg'
+								effect='blur'
+							/>
 						</a>
 					</div>
 				</div>
