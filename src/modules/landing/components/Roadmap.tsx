@@ -154,7 +154,7 @@ export default function Roadmap() {
 }
 
 function TimelineSection({ timeline }: { timeline: Timeline }) {
-	const { imgSrc, title, descriptions, position, imgStyle } =
+	const { imgSrc, title, descriptions, position, imgStyle, width, height } =
 		timeline;
 	const flex = position === 'left' ? 'flex-row ' : 'flex-row-reverse ';
 	const boxClass = `timeline-box-${position}`;
@@ -187,7 +187,7 @@ function TimelineSection({ timeline }: { timeline: Timeline }) {
 			<div className={`${styles['timeline-img']} ${styles[imgClass]}`}>
 				<div className={`${imgStyle} ldPhone:flex ldPhone:justify-center ldPhone:w-full ldPhone:mx-[auto]`}>
 					<LazyLoadCommon>
-						<Image height={100} width={100} src={imgSrc} alt='logo' />
+						<Image height={height} width={width} src={imgSrc} alt='logo' />
 					</LazyLoadCommon>
 				</div>
 			</div>
