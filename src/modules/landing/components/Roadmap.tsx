@@ -187,7 +187,7 @@ function TimelineSection({ timeline }: { timeline: Timeline }) {
 			<div className={`${styles['timeline-img']} ${styles[imgClass]}`}>
 				<div className={`${imgStyle} ldPhone:flex ldPhone:justify-center ldPhone:w-full ldPhone:mx-[auto]`}>
 					<LazyLoadCommon>
-						<Image height={height} width={width} src={imgSrc} alt='logo' />
+						<Image height={height} objectFit='contain' width={width} src={imgSrc} alt='logo' />
 					</LazyLoadCommon>
 				</div>
 			</div>

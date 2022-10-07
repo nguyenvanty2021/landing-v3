@@ -35,9 +35,6 @@ module.exports = {
 		},
 
 		extend: {
-			fontFamily: {
-				avenirNext: ['"Avenir Next LT Pro"', "sans-serif"]
-			},
 			fontSize: {
 				h1: ['60px', '75px'],
 				h2: ['40px', '52px'],

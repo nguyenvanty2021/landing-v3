@@ -40,6 +40,7 @@ export default function Statistic() {
 						height={70}
 						src='/images/roadmap_0.svg'
 						alt='roadmap'
+						objectFit='contain'
 					/>
 				</LazyLoadCommon>
 			</div>
@@ -70,7 +71,7 @@ function StatisticBox({
 		>
 			<div className='w-[4.5rem] flex justify-center h-[4.5rem]'>
 				<LazyLoadCommon>
-					<Image width={width} className='flex-[none] order-[0] grow-[0]' height={60} src={icon} alt={icon} />
+					<Image width={width} objectFit='contain' className='flex-[none] order-[0] grow-[0]' height={60} src={icon} alt={icon} />
 				</LazyLoadCommon>
 			</div>
 			<p className='flex text-center text-white flex-none order-[0] grow-[0] mt-[1.25rem] leading-[42px] text-[2rem] font-[600]'>123</p>
