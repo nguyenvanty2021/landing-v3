@@ -65,7 +65,7 @@ export default function About() {
 								<img
 									src='/images/about-section.svg'
 									alt='logo'
-									className='w-[766px] h-[604.52px] object-contain'
+									className='object-contain'
 								/>
 							</picture>
 						</LazyLoadCommon>
