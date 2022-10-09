@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import LazyLoadCommon from 'common/components/lazyLoad';
 import { BREAK_POINT, ROUTES } from 'common/constants';
 export default function Header() {
@@ -57,12 +58,12 @@ export default function Header() {
 			<div className='w-[3rem] h-full justify-end desktop:justify-start items-center desktop:items-start desktop:h-[unset] flex desktop:hidden desktop:w-[unset] '>
 				<button>
 					<LazyLoadCommon>
-						<img
-
+						<Image
+							width={30}
+							height={30}
 							src='/icons/header_1.svg'
 							alt='logo'
-							className='w-[30px] h-[30px] object-contain'
-
+							objectFit='contain'
 						/>
 					</LazyLoadCommon>
 				</button>

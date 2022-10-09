@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 import LazyLoadCommon from 'common/components/lazyLoad';
 import { ROUTES } from 'common/constants';
@@ -72,11 +73,12 @@ export default function Footer() {
 						<Link href={ROUTES.LANDING} passHref>
 							<a>
 								<LazyLoadCommon>
-									<img
-
+									<Image
+										width={130}
+										height={124.77}
 										src='/images/logo.svg'
 										alt='logo'
-										className='object-contain w-[130px] h-[124.77px]'
+										objectFit='contain'
 									/>
 								</LazyLoadCommon>
 							</a>
@@ -118,11 +120,12 @@ export default function Footer() {
 							<button itemProp='pitch-deck' className={`flex items-center bg-[#553A5F] gap-[10px] px-[0.75rem] py-[0.1875rem] rounded-[5px] w-[fit-content]`}>
 								<h1 className='text-[0.75rem] tracking-[5px] text-[#d47af5] leading-[1rem] font-[700]'>PITCH DECK</h1>
 								<LazyLoadCommon>
-									<img
-
+									<Image
+										width={10}
+										height={10}
 										src='/icons/arrow-right.svg'
 										alt='logo'
-										className='object-contain w-[10px] h-[10px]'
+										objectFit='contain'
 									/>
 								</LazyLoadCommon>
 							</button>
@@ -132,12 +135,12 @@ export default function Footer() {
 							>
 								<h1 className='text-[0.75rem] tracking-[5px] text-[#d47af5] leading-[1rem] font-[700]'>WHITE PAPER</h1>
 								<LazyLoadCommon>
-									<img
+									<Image
 										width={10}
 										height={10}
 										src='/icons/arrow-right.svg'
 										alt='logo'
-										className='object-contain w-[10px] h-[10px]'
+										objectFit='contain'
 									/>
 								</LazyLoadCommon>
 							</button>
@@ -160,12 +163,12 @@ export default function Footer() {
 							className='w-[1.5625rem] h-[1.5625rem]'
 						>
 							<LazyLoadCommon>
-								<img
+								<Image
 									src='/icons/facebook.svg'
 									alt='facebook'
 									width={30}
 									height={30}
-									className='object-contain w-[30px] h-[30px]'
+									objectFit='contain'
 								/>
 							</LazyLoadCommon>
 						</a>
@@ -174,12 +177,12 @@ export default function Footer() {
 							className='w-[1.5625rem] h-[1.5625rem] mx-[1.8125rem]'
 						>
 							<LazyLoadCommon>
-								<img
+								<Image
 									src='/icons/telegram.svg'
 									alt='telegram'
 									width={25}
 									height={22.5}
-									className='object-contain w-[25px] h-[22.5px]'
+									objectFit='contain'
 								/>
 							</LazyLoadCommon>
 						</a>
@@ -188,12 +191,12 @@ export default function Footer() {
 							className='w-[1.5625rem] h-[1.5625rem]'
 						>
 							<LazyLoadCommon>
-								<img
+								<Image
 									src='/icons/twitter.svg'
 									alt='twitter'
 									width={27.31}
 									height={22.5}
-									className='object-contain w-[27.31px] h-[22.5px]'
+									objectFit='contain'
 								/>
 							</LazyLoadCommon>
 						</a>
