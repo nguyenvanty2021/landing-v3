@@ -55,17 +55,13 @@ export default function About() {
 									srcSet='/images/about-section.svg'
 								/>
 								<source
-									media={`(min-width: ${BREAK_POINT.SM_TABLET}px)`}
-									srcSet='/images/about-sectionTablet.svg'
-								/>
-								<source
-									media={`(max-width: ${BREAK_POINT.M_MOBILE}px)`}
+									media={`(max-width: ${BREAK_POINT.SM_TABLET}px)`}
 									srcSet='/images/about-sectionMobile.svg'
 								/>
 								<img
 									src='/images/about-section.svg'
 									alt='logo'
-									className='object-contain'
+									className='w-[766px] h-[604.52px] object-contain'
 								/>
 							</picture>
 						</LazyLoadCommon>
