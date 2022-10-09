@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import React, { useMemo } from 'react';
 export default function Statistic() {
 	const statisticBoxes = useMemo(() => {

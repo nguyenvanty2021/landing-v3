@@ -1,4 +1,4 @@
-import Image from 'next/image';
+
 import React from 'react';
 import styles from '../style/roadmap.module.scss';
 import { useMediaQuery } from 'react-responsive'

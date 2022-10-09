@@ -1,4 +1,4 @@
-import { BREAK_POINT } from 'common/constants';
+
 export default function About() {
 	return (
 		<section id='about'>

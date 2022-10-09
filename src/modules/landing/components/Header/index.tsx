@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { BREAK_POINT, ROUTES } from 'common/constants';
+import { ROUTES } from 'common/constants';
 export default function Header() {
 	const listMenu = [
 		{
