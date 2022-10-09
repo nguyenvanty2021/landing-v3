@@ -46,12 +46,10 @@ export default function Statistic() {
 
 function StatisticBox({
 	label,
-	icon,
-	width,
+
 }: {
 	label: string;
-	icon: string;
-	width: number;
+
 }) {
 	return (
 		<div

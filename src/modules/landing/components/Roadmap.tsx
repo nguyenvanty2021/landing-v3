@@ -153,7 +153,7 @@ export default function Roadmap() {
 }
 
 function TimelineSection({ timeline }: { timeline: Timeline }) {
-	const { imgSrc, title, descriptions, position, imgStyle, width, height } =
+	const { title, descriptions, position, imgStyle,  } =
 		timeline;
 	const flex = position === 'left' ? 'flex-row ' : 'flex-row-reverse ';
 	const boxClass = `timeline-box-${position}`;
