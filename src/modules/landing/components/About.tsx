@@ -56,7 +56,7 @@ export default function About() {
 								/>
 								<source
 									media={`(max-width: ${BREAK_POINT.SM_TABLET}px)`}
-									srcSet='/images/about-section.png'
+									srcSet='/images/about-sectionMobile.png'
 								/>
 								<img
 									src='/images/about-section.png'
