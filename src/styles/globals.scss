@@ -21,6 +21,37 @@
 		backdrop-filter: blur(10px);
 		border-radius: 20px;
 	}
+	.pointLeftRoadmap {
+		transform: translate(50%, -50%) rotate(-225deg);
+		right: -0.5px;
+	}
+	.borderRoadmap {
+		border: 3px solid #0c1e32;
+	}
+	.directionMobile {
+		direction: ltr;
+	}
+	.backgroundRoadmap {
+		background: linear-gradient(
+			102.92deg,
+			#3bbfff 0%,
+			#d47af5 56.77%,
+			rgba(212, 122, 245, 0) 99.1%
+		)
+	}
+	.directionPC {
+		direction: rtl;
+	}
+	.contentColor {
+		content: '\2022'
+	}
+	.contentEmpty {
+		content: ''
+	}
+	.pointRightRoadmap {
+		transform: translate(-50%, -50%) rotate(-45deg);
+		left: 0.5px;
+	}
 	.gradient-about {
 		background: linear-gradient(
 			102.92deg,
