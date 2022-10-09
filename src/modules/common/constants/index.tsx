@@ -11,5 +11,6 @@ export const ROUTES = {
 };
 export const BREAK_POINT = {
 	SM_TABLET: 768,
-	M_TABLET: 960
+	M_TABLET: 960,
+	M_MOBILE: 576
 }

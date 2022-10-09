@@ -55,7 +55,11 @@ export default function About() {
 									srcSet='/images/about-section.svg'
 								/>
 								<source
-									media={`(max-width: ${BREAK_POINT.SM_TABLET}px)`}
+									media={`(min-width: ${BREAK_POINT.SM_TABLET}px)`}
+									srcSet='/images/about-sectionTablet.svg'
+								/>
+								<source
+									media={`(max-width: ${BREAK_POINT.M_MOBILE}px)`}
 									srcSet='/images/about-sectionMobile.svg'
 								/>
 								<img
