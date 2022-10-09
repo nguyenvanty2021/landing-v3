@@ -1,7 +1,6 @@
 import LazyLoadCommon from 'common/components/lazyLoad';
 import Image from 'next/image';
 import React from 'react';
-import styles from '../styles/roadmap.module.scss';
 import { useMediaQuery } from 'react-responsive'
 import { BREAK_POINT } from 'common/constants';
 interface Timeline {
