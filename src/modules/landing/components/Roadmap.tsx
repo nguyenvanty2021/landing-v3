@@ -1,4 +1,3 @@
-import LazyLoadCommon from 'common/components/lazyLoad';
 import Image from 'next/image';
 import React from 'react';
 import styles from '../style/roadmap.module.scss';
@@ -186,9 +185,7 @@ function TimelineSection({ timeline }: { timeline: Timeline }) {
 			</div>
 			<div className={`${styles['timeline-img']} ${styles[imgClass]}`}>
 				<div className={`${imgStyle} ldPhone:flex ldPhone:justify-center ldPhone:w-full ldPhone:mx-[auto]`}>
-					<LazyLoadCommon>
-						<Image height={height} objectFit='contain' width={width} src={imgSrc} alt='logo' />
-					</LazyLoadCommon>
+
 				</div>
 			</div>
 		</div>
