@@ -8,6 +8,7 @@ const nextConfig = {
 	},
 	swcMinify: true,
 	cssModules: true,
+	compress: true,
 	images: {
 		dangerouslyAllowSVG: true,
 		// disableStaticImages: true,
