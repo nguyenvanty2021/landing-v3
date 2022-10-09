@@ -52,14 +52,14 @@ export default function About() {
 							<picture>
 								<source
 									media={`(min-width: ${BREAK_POINT.M_TABLET}px)`}
-									srcSet='/images/about-section.svg'
+									srcSet='/images/about-section.png'
 								/>
 								<source
 									media={`(max-width: ${BREAK_POINT.SM_TABLET}px)`}
-									srcSet='/images/about-sectionMobile.svg'
+									srcSet='/images/about-section.png'
 								/>
 								<img
-									src='/images/about-section.svg'
+									src='/images/about-section.png'
 									alt='logo'
 									className='w-[766px] h-[604.52px] object-contain'
 								/>
