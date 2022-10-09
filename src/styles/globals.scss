@@ -3,24 +3,11 @@
 @tailwind utilities;
 
 @layer utilities {
-	.scrollbar-medium::-webkit-scrollbar {
-		display: none;
-	}
-	.scrollbar-width {
-		-ms-overflow-style: none; /* IE and Edge */
-		scrollbar-width: none; /* Firefox */
-	}
-	.backgroundSizeMobile {
-		background-size: 500%;
-	}
+	// footer
 	.footer {
 		border-top: 1px solid rgba(255, 255, 255, 0.2);
 	}
-	.backgroundStatistic {
-		background: rgba(212, 122, 245, 0.15);
-		backdrop-filter: blur(10px);
-		border-radius: 20px;
-	}
+	// roadmap
 	.pointLeftRoadmap {
 		transform: translate(50%, -50%) rotate(-225deg);
 		right: -0.5px;
@@ -37,20 +24,37 @@
 			#3bbfff 0%,
 			#d47af5 56.77%,
 			rgba(212, 122, 245, 0) 99.1%
-		)
+		);
 	}
 	.directionPC {
 		direction: rtl;
 	}
 	.contentColor {
-		content: '\2022'
+		content: '\2022';
 	}
 	.contentEmpty {
-		content: ''
+		content: '';
 	}
 	.pointRightRoadmap {
 		transform: translate(-50%, -50%) rotate(-45deg);
 		left: 0.5px;
+	}
+	// statistic
+	.backgroundStatistic {
+		background: rgba(212, 122, 245, 0.15);
+		backdrop-filter: blur(10px);
+		border-radius: 20px;
+	}
+	// index
+	.scrollbar-medium::-webkit-scrollbar {
+		display: none;
+	}
+	.scrollbar-width {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+	.backgroundSizeMobile {
+		background-size: 500%;
 	}
 	.gradient-about {
 		background: linear-gradient(

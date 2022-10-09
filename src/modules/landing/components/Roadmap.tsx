@@ -1,6 +1,7 @@
 import LazyLoadCommon from 'common/components/lazyLoad';
 import Image from 'next/image';
 import React from 'react';
+import styles from '../styles/roadmap.module.scss';
 import { useMediaQuery } from 'react-responsive'
 import { BREAK_POINT } from 'common/constants';
 interface Timeline {
@@ -156,7 +157,7 @@ function TimelineSection({ timeline, index }: { timeline: Timeline, index: numbe
 	const { imgSrc, title, descriptions, position, imgStyle, width, height } =
 		timeline;
 	return (
-		<div className={`desktop:${position === 'left' ? 'flex-row ' : 'flex-row-reverse'} flex flex-col-reverse pt-[35px] w-full desktop:py-[2rem] justify-center`}>
+		<div className={`${position === 'left' ? 'desktop:flex-row ' : 'desktop:flex-row-reverse'} flex flex-col-reverse pt-[35px] w-full desktop:py-[2rem] justify-center`}>
 			<div
 				itemScope
 				itemType='http://schema.org/Organization'
