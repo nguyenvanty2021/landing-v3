@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 @layer utilities {
+	// about {
+	.dot {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		cursor: pointer;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+	}
+	.transition {
+		transition: opacity 0.2s linear, visibility 0.2s linear;
+	}
 	// footer
 	.footer {
 		border-top: 1px solid rgba(255, 255, 255, 0.2);
