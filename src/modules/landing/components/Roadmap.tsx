@@ -1,7 +1,7 @@
 import LazyLoadCommon from 'common/components/lazyLoad';
 import Image from 'next/image';
 import React from 'react';
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive';
 import { BREAK_POINT } from 'common/constants';
 interface Timeline {
 	imgSrc: string;
@@ -14,7 +14,7 @@ interface Timeline {
 }
 
 export default function Roadmap() {
-	const isTabletOrMobile = useMediaQuery({ maxWidth: BREAK_POINT.SM_TABLET })
+	const isTabletOrMobile = useMediaQuery({ maxWidth: BREAK_POINT.SM_TABLET });
 	const timelines: Timeline[] = [
 		{
 			imgSrc: '/images/roadmap_1.svg',
@@ -136,14 +136,15 @@ export default function Roadmap() {
 	return (
 		<section className='w-full pt-[9.8125rem] px-[32px]  ' id='roadmap'>
 			<div className='flex justify-center mb-[1.25rem]'>
-				<h1
-					className={`text-[3.125rem] font-semibold gradient-about `}
-				>
+				<h1 className={`text-[3.125rem] font-semibold gradient-about `}>
 					Roadmap
 				</h1>
 			</div>
 
-			<div className={` before:w-[1px] before:backgroundRoadmap before:contentEmpty before:hidden before:absolute desktop:before:block before:left-[50%] before:h-full relative pb-[8.0625rem] `}>
+			<div
+				className={` before:w-[1px] before:backgroundRoadmap before:contentEmpty before:hidden before:absolute
+			desktop:before:block before:left-[50%] before:h-full relative pb-[8.0625rem] `}
+			>
 				{timelines.map((timeline, index) => (
 					<TimelineSection index={index} key={index} timeline={timeline} />
 				))}
@@ -152,41 +153,101 @@ export default function Roadmap() {
 	);
 }
 
-function TimelineSection({ timeline, index }: { timeline: Timeline, index: number }) {
+function TimelineSection({
+	timeline,
+	index,
+}: {
+	timeline: Timeline;
+	index: number;
+}) {
 	const { imgSrc, title, descriptions, position, imgStyle, width, height } =
 		timeline;
 	return (
-		<div className={`${position === 'left' ? 'desktop:flex-row ' : 'desktop:flex-row-reverse'} flex flex-col-reverse pt-[35px] w-full desktop:py-[2rem] justify-center`}>
+		<div
+			className={`${
+				position === 'left' ? 'desktop:flex-row ' : 'desktop:flex-row-reverse'
+			} flex flex-col-reverse
+		 pt-[35px] w-full desktop:py-[2rem] justify-center`}
+		>
 			<div
 				itemScope
 				itemType='http://schema.org/Organization'
-				className={`flex relative mt-[1.0625rem] desktop:mt-[unset] h-full desktop:pt-[1.5rem] flex-col w-full desktop:w-[50%] ${position === 'left' ? 'items-start desktop:pr-[6.375rem] desktop:items-end' : 'items-start desktop:pl-[6.375rem] h-full '} tablet:max-w-[unset] ldPhone:max-w-[500px] mdPhone:max-w-[400px] smPhone:max-w-[300px] desktop:max-w-[unset] smPhone:justify-center ldPhone:flex ldPhone:w-full smPhone:mx-[auto]`}
+				className={`flex relative mt-[1.0625rem] desktop:mt-[unset] h-full desktop:pt-[1.5rem] flex-col w-full
+				desktop:w-[50%] ${
+					position === 'left'
+						? 'items-start desktop:pr-[6.375rem] desktop:items-end'
+						: 'items-start desktop:pl-[6.375rem] h-full '
+				}
+				tablet:max-w-[unset] ldPhone:max-w-[500px] mdPhone:max-w-[400px] smPhone:max-w-[300px] desktop:max-w-[unset] smPhone:justify-center
+				ldPhone:flex ldPhone:w-full smPhone:mx-[auto]`}
 			>
-				<h1 itemProp='title' className='text-[2rem] text-white font-[700] text-right mb-[0.5rem] leading-[42px] desktop:leading-[55px] desktop:text-[2.5rem] '>
+				<h1
+					itemProp='title'
+					className='text-[2rem] text-white font-[700] text-right mb-[0.5rem] leading-[42px] desktop:leading-[55px] desktop:text-[2.5rem] '
+				>
 					{title}
 				</h1>
 				<div
 					itemProp='point'
-					className={`${position === 'left' ? 'pointLeftRoadmap' : 'pointRightRoadmap'} ${index === 0 ? 'bg-[#36c1ff] before:bg-[#36c1ff] ' :
-					index === 1 ? 'bg-[#66abfc] before:bg-[#66abfc] ' :
-					index === 2 ? 'bg-[#9198f9] before:bg-[#9198f9] ' :
-				    index === 3 ? 'bg-[#c980f6] before:bg-[#c980f6] ' :
-					index === 4 ? 'bg-[#a464c6] before:bg-[#a464c6] ' :
-					'bg-[#58417d] before:bg-[#58417d] '} before:top-[1.5rem] before:contentEmpty before:hidden desktop:before:flex before:rotate-[45deg] before:w-[50px] before:h-[1px] before:rounded-[5px] before:absolute borderRoadmap absolute top-[50px] desktop:flex hidden items-center w-[1rem] h-[1rem] rounded-[5px]`}
+					className={`${
+						position === 'left' ? 'pointLeftRoadmap' : 'pointRightRoadmap'
+					} ${
+						index === 0
+							? 'bg-blue-20 before:bg-blue-20 '
+							: index === 1
+							? 'bg-66abfc before:bg-66abfc '
+							: index === 2
+							? 'bg-9198f9 before:bg-9198f9 '
+							: index === 3
+							? 'bg-c980f6 before:bg-c980f6 '
+							: index === 4
+							? 'bg-a464c6 before:bg-a464c6 '
+							: 'bg-58417d before:bg-58417d '
+					} before:top-[1.5rem] before:contentEmpty before:hidden desktop:before:flex
+					before:rotate-[45deg] before:w-[50px] before:h-[1px] before:rounded-[5px] before:absolute borderRoadmap absolute top-[50px]
+					desktop:flex hidden items-center w-[1rem] h-[1rem] rounded-[5px]`}
 				/>
 				<ul
 					itemProp='description'
-					className={` max-w-[75%] ${position === 'left' ? 'directionMobile desktop:directionPC' : ''} `}
+					className={` max-w-[75%] ${
+						position === 'left' ? 'directionMobile desktop:directionPC' : ''
+					} `}
 				>
 					{descriptions.map((description, index) => (
-						<li className={` mt-[0.9375rem] before:text-[#66abfc] before:contentColor before:inline-block before:font-bold flex list-none items-center text-white opacity-[0.8] leading-[24px] text-[1rem] ${position === 'left' ? ' text-left desktop:text-right desktop:before:ml-[1em] before:mr-[1em] desktop:before:mr-[unset] ' : ' text-left before:mr-[1em] '}`} key={index}>{description}</li>
+						<li
+							className={` mt-[0.9375rem] before:text-66abfc before:contentColor before:inline-block before:font-bold flex list-none
+						 items-center text-white opacity-[0.8] leading-[24px] text-[1rem]
+						 ${
+								position === 'left'
+									? ' text-left desktop:text-right desktop:before:ml-[1em] before:mr-[1em] desktop:before:mr-[unset] '
+									: ' text-left before:mr-[1em] '
+							}`}
+							key={index}
+						>
+							{description}
+						</li>
 					))}
 				</ul>
 			</div>
-			<div className={` h-full w-full flex desktop:w-[50%] ${position === 'left' ? ' h-full justify-center desktop:justify-start ' : ' justify-center desktop:justify-end '}`}>
-				<div className={`${imgStyle} ldPhone:flex ldPhone:justify-center ldPhone:w-full ldPhone:mx-[auto]`}>
+			<div
+				className={` h-full w-full flex desktop:w-[50%] ${
+					position === 'left'
+						? ' h-full justify-center desktop:justify-start '
+						: ' justify-center desktop:justify-end '
+				}`}
+			>
+				<div
+					className={`${imgStyle} ldPhone:flex ldPhone:justify-center ldPhone:w-full ldPhone:mx-[auto]`}
+				>
 					<LazyLoadCommon>
-						<Image height={height} className=' h-full desktop:h-[unset] ' objectFit='contain' width={width} src={imgSrc} alt='logo' />
+						<Image
+							height={height}
+							className=' h-full desktop:h-[unset] '
+							objectFit='contain'
+							width={width}
+							src={imgSrc}
+							alt='logo'
+						/>
 					</LazyLoadCommon>
 				</div>
 			</div>

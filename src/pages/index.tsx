@@ -35,7 +35,7 @@ export default function LandingPage() {
 				description='Description landing...'
 				href={ROUTES.LANDING}
 			/>
-			<div className='max-w-[100%] scrollbar-width scrollbar-medium overflow-hidden bg-[#0c1e32] '>
+			<div className='max-w-[100%] scrollbar-width scrollbar-medium overflow-hidden bg-0c1e32 '>
 				<div className='bg-repeat flex items-center bg-landing flex-col bg-center backgroundSizeMobile desktop:bg-contain'>
 					<div className='desktop:max-w-[90rem] w-full mobile:max-w-[100vw]'>
 						<Header />

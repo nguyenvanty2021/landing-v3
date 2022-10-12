@@ -8,17 +8,19 @@ export default function About() {
 					<div
 						itemScope
 						itemType='http://schema.org/Organization'
-						className='flex flex-col mr-[5rem] tablet:max-w-[unset] ldPhone:max-w-[500px] smPhone:mx-[auto] mdPhone:max-w-[400px] smPhone:max-w-[300px] items-start desktop:items-end w-full desktop:w-[31rem]'
+						className='flex flex-col mr-[5rem] tablet:max-w-[unset] ldPhone:max-w-[500px] smPhone:mx-[auto]
+						 mdPhone:max-w-[400px] smPhone:max-w-[300px] items-start desktop:items-end w-full desktop:w-[31rem]'
 					>
 						<h1
 							itemProp='title'
-							className={`text-left text-[2.5rem] font-[600] inline-block leading-[3.25rem] mt-[4.75rem] desktop:leading-[3.125rem] desktop:text-[3.125rem] desktop:text-right gradient-about`}
+							className={`text-left text-[2.5rem] font-[600] inline-block leading-[3.25rem] mt-[4.75rem]
+							 desktop:leading-[3.125rem] desktop:text-[3.125rem] desktop:text-right gradient-about`}
 						>
 							About
 						</h1>
 						<h2
 							itemProp='sub-title'
-							className='text-[#d47af5] mt-[1.25rem] font-[600] leading-[1.75rem] text-[1.25rem] desktop:text-[1.375rem] text-left desktop:text-right '
+							className='text-purple-30 mt-[1.25rem] font-[600] leading-[1.75rem] text-[1.25rem] desktop:text-[1.375rem] text-left desktop:text-right '
 						>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
 							vulputate libero et velit interdum, ac aliquet odio mattis.
