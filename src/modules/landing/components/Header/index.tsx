@@ -2,7 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import LazyLoadCommon from 'common/components/lazyLoad';
 import { BREAK_POINT, ROUTES } from 'common/constants';
+import { useState } from 'react';
+import MenuComponent from './Menu';
 export default function Header() {
+	const [menu, setMenu] = useState<boolean>(false);
 	const listMenu = [
 		{
 			id: 1,
@@ -25,6 +28,9 @@ export default function Header() {
 			href: '#gxz-token',
 		},
 	];
+	const handleOpenMenu = (status: boolean): void => {
+		setMenu(status);
+	};
 	return (
 		<header
 			className='flex h-[5rem] relative items-center w-full justify-between p-[1rem] desktop:p-[unset] desktop:h-[6.875rem]'
@@ -56,7 +62,7 @@ export default function Header() {
 				</div>
 			</div>
 			<div className='w-[3rem] mr-[1.25rem] h-full justify-end desktop:justify-start items-center desktop:items-start desktop:h-[unset] flex desktop:hidden desktop:w-[unset] '>
-				<button>
+				<button onClick={() => setMenu(!menu)}>
 					<LazyLoadCommon>
 						<Image
 							width={30}
@@ -67,6 +73,13 @@ export default function Header() {
 						/>
 					</LazyLoadCommon>
 				</button>
+				{menu && (
+					<MenuComponent
+						listMenu={listMenu}
+						handleOpenMenu={handleOpenMenu}
+						menu={menu}
+					/>
+				)}
 			</div>
 			<ul
 				id='menu'

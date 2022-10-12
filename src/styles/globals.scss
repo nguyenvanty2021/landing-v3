@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer utilities {
+	// header
+	.transitionHeader {
+		transform: translateX(100%)
+	}
 	// about {
 	.dot {
 		overflow: hidden;
