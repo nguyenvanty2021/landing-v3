@@ -31,6 +31,8 @@ module.exports = {
 			mTablet: '992px',
 			smDesktop: '1024px',
 			desktop: '1280px',
+			mDesktop: '1366px',
+			lDesktop: '1440px'
 			// => @media (min-width: 1280px) { ... }
 		},
 

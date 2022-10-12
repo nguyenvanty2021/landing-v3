@@ -30,7 +30,7 @@ export default function Header() {
 			className='flex h-[5rem] relative items-center w-full justify-between p-[1rem] desktop:p-[unset] desktop:h-[6.875rem]'
 			id='header'
 		>
-			<div className='desktop:ml-[9.375rem] relative h-full w-[3.125rem] desktop:w-[5.625rem] '>
+			<div className='ml-[1rem] desktop:ml-[4.5rem] mDesktop:ml-[5rem] lDesktop:ml-[6rem] relative h-full w-[3.125rem] desktop:w-[5.625rem] '>
 				<div className='h-[4.125rem] absolute w-full bottom-0 desktop:h-[5.3987rem] desktop:mb-[0.2263rem]'>
 					<Link href={ROUTES.LANDING} passHref>
 						<a>
@@ -55,7 +55,7 @@ export default function Header() {
 					</Link>
 				</div>
 			</div>
-			<div className='w-[3rem] h-full justify-end desktop:justify-start items-center desktop:items-start desktop:h-[unset] flex desktop:hidden desktop:w-[unset] '>
+			<div className='w-[3rem] mr-[1.25rem] h-full justify-end desktop:justify-start items-center desktop:items-start desktop:h-[unset] flex desktop:hidden desktop:w-[unset] '>
 				<button>
 					<LazyLoadCommon>
 						<Image
