@@ -37,6 +37,23 @@ module.exports = {
 		},
 
 		extend: {
+			animation: {
+				'spin-slow': 'spin 3s linear infinite',
+				wiggle: 'wiggle 1s ease-in-out infinite'
+			},
+			keyframes: {
+				wiggle: {
+					'0%, 100%': {
+						transform: 'rotate(-12deg)'
+					},
+					'50%': {
+						transform: 'rotate(12deg)'
+					}
+				}
+			},
+			transitionDuration: {
+				2000: '2000'
+			},
 			fontSize: {
 				h1: ['60px', '75px'],
 				h2: ['40px', '52px'],
