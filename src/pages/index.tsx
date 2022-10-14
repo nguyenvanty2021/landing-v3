@@ -7,9 +7,7 @@ import { ROUTES } from 'common/constants';
 const Header = dynamic(
 	() => import('./../modules/landing/components/Header/index')
 );
-const Footer = dynamic(
-	() => import('./../modules/landing/components/Footer')
-);
+const Footer = dynamic(() => import('./../modules/landing/components/Footer'));
 const PreFooter = dynamic(
 	() => import('./../modules/landing/components/PreFooter')
 );

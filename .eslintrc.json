@@ -3,6 +3,8 @@
 		"es2021": true
 	},
 	"extends": [
+		"react-app",
+		"prettier",
 		"next/core-web-vitals",
 		"eslint:recommended",
 		"plugin:react/recommended",
@@ -22,6 +24,31 @@
 		"prettier"
 	],
 	"rules": {
+		"quotes": [
+			"error",
+			"single" // báo lỗi khi dùng dấu ngoặc đơn
+		],
+		"prettier/prettier": [
+			"warn",
+			// nội dung từ dòng 30 đến 46 bên file prettier như thế nào thì bên đây y chan vậy
+			{
+				"arrowParens": "always",
+				"bracketSameLine": false,
+				"bracketSpacing": true,
+				"embeddedLanguageFormatting": "auto",
+				"htmlWhitespaceSensitivity": "css",
+				"jsxSingleQuote": true,
+				"proseWrap": "preserve",
+				"quoteProps": "as-needed",
+				"semi": true,
+				"singleQuote": true,
+				"useTabs": true,
+				"tabWidth": 2,
+				"trailingComma": "es5",
+				"printWidth": 80,
+				"endOfLine": "auto"
+			}
+		],
 		"no-console": "warn",
 		"no-use-before-define": "off",
 		"react/react-in-jsx-scope": "off",

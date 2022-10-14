@@ -5,3 +5,5 @@ build
 *.scss
 *.css
 *.svg
+src/setupTests.js
+src/reportWebVitals.js
